@@ -42,8 +42,8 @@ class mqConsumer (mqConsumerInterface):
 
     def on_message_callback(self, channel, method_frame, header_frame, body):
         channel.basic_ack(method_frame.delivery_tag, False) #acknowldge message
-        print(body)
-
+        print(f"{body}")
+        
     def startConsuming(self):
         print("[*] Waiting for messages. To exit press CTRL+C")
         pass

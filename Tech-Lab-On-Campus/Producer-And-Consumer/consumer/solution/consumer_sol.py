@@ -9,7 +9,6 @@ class mqConsumer (mqConsumerInterface):
         self.channel = None
         self.connection = None
         self.setupRMQConnection()
-        pass
 
     def setupRMQConnection(self):
         # Set-up Connection to RabbitMQ service
@@ -46,7 +45,7 @@ class mqConsumer (mqConsumerInterface):
         
     def startConsuming(self):
         print("[*] Waiting for messages. To exit press CTRL+C")
-        pass
+        self.channel.start_consuming()
 
     
     def __del__(self):
@@ -55,4 +54,4 @@ class mqConsumer (mqConsumerInterface):
         self.channel.close()
         # Close connection
         self.connection.close()
-        pass
+        

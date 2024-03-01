@@ -26,7 +26,7 @@ class mqProducer(mqProducerInterface):
             routing_key=f"{self.routing_key}",
             body=f"{message}"
         )
-        print(f"{message}")
+        # print(f"{message}")
 
         # Close Channel
         self.channel.close()

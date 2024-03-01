@@ -37,7 +37,7 @@ def main(ticker: str, price: float, sector: str):
     #
     #                       WRITE CODE HERE!!!
     #
-    message = f"{ticker} costs {price}!"
+    message = f"{ticker} now costs ${price}!"
     
     
     producer.publishOrder(message)
